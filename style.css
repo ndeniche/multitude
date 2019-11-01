@@ -1,0 +1,61 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.multiselect-selected-list {
+  position: relative;
+  height: 2em;
+  width: 200px;
+  border: solid 1px #ddd;
+}
+
+.multiselect-selected-list .multiselect-focus-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.multiselect-selected-list .multiselect-caret {
+  border: none;
+}
+
+.multiselect-selected-list::after {
+  content: 'v';
+  font-family: sans-serif;
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  line-height: 1em;
+  height: 100;
+}
+
+.multiselect-selected-list .pill {
+  display: inline-block;
+  padding: 2px;
+  border-radius: 3px;
+  height: 80%;
+  margin-top: 10%;
+}
+
+.multiselect-list {
+  display: none;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.multiselect-dropdown-state {
+  text-indent: -99999999999px;
+  visibility: hidden;
+  position: absolute;
+}
+
+.multiselect-dropdown-state:checked ~ .multiselect-list {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

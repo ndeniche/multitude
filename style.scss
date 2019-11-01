@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.multiselect-selected-list {
+    position: relative;
+    height: 2em;
+    width: 200px;
+    border: solid 1px #ddd;
+    .multiselect-focus-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .multiselect-caret {
+        border: none;
+    }
+    &::after {
+        content: 'v';
+        font-family: sans-serif;
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 0;
+        line-height: 1em;
+        height: 100;
+        
+    }
+    .pill {
+        display: inline-block;
+        padding: 2px;
+        border-radius: 3px;
+        height: 80%;
+        margin-top: 10%;
+    }
+}
+
+.multiselect-list {
+    display: none;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.multiselect-dropdown-state {
+    text-indent: -99999999999px;
+    visibility: hidden;
+    position: absolute;
+    &:checked ~ .multiselect-list {
+        display: block;
+    }
+}
